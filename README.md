@@ -21,6 +21,11 @@ If you don't know how to send in a pr, just ask return or any of the other autis
     - [ ] Integrations
     - [ ] Bootstrapper Options
     - [ ] Joingame stuff (lol)
+- [ ] For Developers
+    - [ ] Downloading from source and building
+    - [ ] Whether we accept AI code or not (We wont)
+- [ ] License page
+- [ ] Contributors Page
 
 ## TODO (Maybe):
 - [ ] BloxstrapRPC
