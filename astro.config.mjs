@@ -11,6 +11,16 @@ export default defineConfig({
                 src: './src/assets/favicon.webp',
                 replacesTitle: true,
             },
+            defaultLocale: 'root',
+            head: [
+                {
+                    tag: 'meta',
+                    attrs: {
+                        property: 'og:image',
+                        content: '/og.png',
+                    },
+                },
+            ],
             social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/fishstrap/fishstrap' }],
             customCss: [
               './src/css/custom.css',
