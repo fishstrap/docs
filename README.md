@@ -15,7 +15,7 @@ If you don't know how to send in a pr, just ask return or any of the other autis
     - [ ] Modding (@GoingCrazyDude)
     - [ ] FastFlags (Studio)
     - [ ] FastFlags (Client)
-    - [ ] GlobalBasicSettings
+    - [ ] GlobalBasicSettings (@GoingCrazyDude)
     - [ ] Appearance
     - [ ] Integrations
     - [ ] Bootstrapper Options
@@ -28,7 +28,7 @@ If you don't know how to send in a pr, just ask return or any of the other autis
 
 ## TODO (Maybe):
 - [ ] BloxstrapRPC
-- [ ] Custom Themes
+- [ ] Custom Themes (@GoingCrazyDude)
 - [ ] Privacy Policy (?)
 
 ## For testing
