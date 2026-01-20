@@ -56,7 +56,7 @@ To publish the Fishstrap binary, you have two options:
     1. Navigate to the project directory.
     2. Run the following command:
 
-       <Code code="dotnet publish -p:PublishSingleFile=true -r win-x64 -c Release --self-contained false .\Bloxstrap\Bloxstrap.csproj" title="pwsh" lang="bash" />
+       <Code code="dotnet publish Bloxstrap /p:PublishProfile=Publish-x64" title="pwsh" lang="bash" />
 </Steps>
 
 You will find the resulting binary under `fishstrap\Bloxstrap\bin\release\net6.0-windows\publish\win-x64`.
