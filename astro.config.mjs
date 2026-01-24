@@ -39,6 +39,7 @@ export default defineConfig({
                         { label: 'Introduction to Fishstrap', slug: 'manual/introduction'},
                         { label: 'FastFlags (Client)', slug: 'manual/fast-flags-client'},
                         { label: 'Appearance', slug: 'manual/appearance'},
+                        { label: 'Integrations', slug: 'manual/integrations'},
 					]
 				},
 				{
