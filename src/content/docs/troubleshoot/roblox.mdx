@@ -1,6 +1,54 @@
 ---
-title: Roblox
-description: TODO
+title: Client Issues (Roblox)
+description: Troubleshooting common Roblox client issues including launch failures, infinite loading, performance problems.
 ---
 
-# TODO
+import { Card, Aside, LinkCard } from '@astrojs/starlight/components';
+
+## Roblox fails to launch or crashes immediately
+
+#### Causes:
+- Corrupted installation  
+- Outdated graphics drivers  
+- Conflicting third-party software (e.g., exploits)
+
+#### Solution:
+1. **Reinstall Roblox**:  
+   Go to [Roblox.com](https://www.roblox.com), log in, and join any experience to trigger a fresh install.
+
+2. **Update GPU drivers**:  
+   - NVIDIA: [GeForce Experience](https://www.nvidia.com/Download/index.aspx)  
+   - AMD: [Adrenalin Software](https://www.amd.com/en/support)  
+   - Intel: [Driver & Support Assistant](https://www.intel.com/content/www/us/en/support/detect.html)
+
+## Infinite loading screens
+
+#### Causes:
+- DNS or network filtering  
+- Windows firewall blocking Roblox  
+- Georestrictions (e.g., regional blocks in countries like Russia)
+- A full drive
+
+#### Solution:
+1. **Flush DNS**:  
+   Open Command Prompt as admin and run:
+   ```bash
+   ipconfig /flushdns
+   netsh winsock reset
+   ```
+   Restart your PC afterward.
+
+2. **Check firewall rules**:  
+   Allow `RobloxPlayerBeta.exe` through Windows Defender Firewall.
+
+3. **Check for regional restrictions**:  
+   In some countries (e.g., Russia), Roblox may be blocked by local regulations. Search online to confirm availability in your region.
+
+4. **Clear your drive**:
+    Make sure your drive is not nearing maximum capacity. This is known to increase load times dramatically.
+
+## Poor performance or increased stuttering compared to stock Roblox
+If Fishstrap performs worse than normal Roblox (which it shouldn't), please contact us on our Github issues or on our Discord server.
+
+<LinkCard title="Fishstrap Discord Server" href="https://discord.gg/dZJSbgHx8y" />
+<LinkCard title="Github Issues" href="https://github.com/fishstrap/fishstrap/issues" />

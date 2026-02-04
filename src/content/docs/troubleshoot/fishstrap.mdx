@@ -1,6 +1,100 @@
 ---
-title: Fishstrap
-description: TODO
+title: Fishstrap Issues
+description: Troubleshooting common Fishstrap issues including missing .NET runtimes, network errors, FastFlag problems, and configuration mistakes.
 ---
 
-# TODO
+import { Card, Aside, Code, Steps } from '@astrojs/starlight/components';
+
+## ```"[System.IO.FileNotFoundException](System.IO.FileNotFoundException: Could not load file or assembly..."```
+
+#### Causes
+
+- Missing .NET Desktop Runtime 6.0  
+- Corrupted or incomplete .NET installation
+    
+#### Solution
+    
+<Steps>
+    1. **Check installed runtimes**:  
+       Open Command Prompt and run:
+       <Code title="pwsh" code="dotnet --list-runtimes" lang="bash" />
+       Look for `Microsoft.WindowsDesktop.App 6.0.x`. If missing, the runtime isn’t installed correctly.
+    
+    2. **Install .NET Desktop Runtime 6.0**:  
+       Download and install **.NET Desktop Runtime 6.0** (not just ".NET Runtime") from:  
+       [https://dotnet.microsoft.com/en-us/download/dotnet/6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+</Steps>
+
+---
+
+## ```"System.Net.Http.HttpRequestException:..."```
+
+#### Causes:
+- Roblox is down.
+- Using a VPN, Cloudflare WARP, or proxy.
+- Government censorship or network restrictions.
+- Incorrect Deployment settings in Fishstrap
+
+#### Solution
+<Steps>
+    1. **Check if Roblox is working** by visiting the [roblox status](https://status.roblox.com/) page.
+    2. **Disable/Enable VPNs, or proxies**: Check if the issue persists after you disable/enable your VPN.
+    3. **Check Deployment settings**:
+       In Fishstrap, go to the **Deployment** tab → Set **Channel** to `Production` and **Automatic channel change action** to **“Never change”**.
+</Steps>
+
+---
+
+## My Exploit/Hack doesn't work!
+We at Fishstrap take this very seriously. Please follow this link for further [help](/brainless.png).
+
+---
+
+## FFlags are not working
+
+#### Causes:
+
+- Using flags not on Roblox’s official allowlist  
+- Expecting Studio behavior in the client
+
+#### Solution:
+1. **Only use allowlisted FastFlags in the client**:  
+   As of late 2025, Roblox enforces a strict allowlist for client-side FastFlags.  
+   See the [full list here](https://devforum.roblox.com/t/allowlist-for-local-client-configuration-via-fast-flags/3966569).
+
+2. **Studio has no allowlist**:  
+   All FastFlags still work in **Roblox Studio**, but **not in the client** unless explicitly allowed.
+
+---
+
+## Global settings tab is greyed out
+
+#### Causes:
+
+- Fishstrap hasn’t launched Roblox yet  
+- Configuration not initialized
+
+#### Solution:
+1. **Launch any game through Fishstrap at least once** - this initializes internal settings.  
+2. **Close Roblox and reopen the Fishstrap settings** - global settings should now be editable.
+
+---
+
+## Stuck on “Waiting for data…”
+
+<Steps>
+    1. **Click Cancel** on the loading screen.  
+    2. **Rejoin the same game** — this usually resolves temporary asset loading issues.
+</Steps>
+
+---
+
+## “The JSON you've entered does not appear to be valid.”
+
+#### Causes:
+
+- Incorrect JSON syntax  
+- Misformatted FastFlag entries
+
+#### Solution:
+Use a JSON verification tool like [JSONLint](https://jsonlint.com/) to validate your JSON.
