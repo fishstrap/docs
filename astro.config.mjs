@@ -7,6 +7,7 @@ export default defineConfig({
 	integrations: [
         starlight({
             title: 'Fishstrap',
+            favicon: '/favicon.png',
             logo: {
                 src: './src/assets/favicon.webp',
                 replacesTitle: true,
