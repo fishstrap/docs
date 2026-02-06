@@ -7,9 +7,9 @@ If you don't know how to send in a pr, just ask return or any of the other autis
 
 - [X] Theming (Theming the Doc site) (@GoingCrazyDude)
 - [X] FAQ Entries (Basic FAQ) (@GoingCrazyDude)
-- [ ] Troubleshooting Entries
-    - [ ] Client Issues (Roblox)
-    - [ ] Fishstrap Issues
+- [X] Troubleshooting Entries (@aliceenight)
+    - [X] Client Issues (Roblox)
+    - [X] Fishstrap Issues
 - [ ] Manual
     - [ ] Introduction to Fishstrap
     - [ ] Modding (@GoingCrazyDude)
