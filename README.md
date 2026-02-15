@@ -18,7 +18,7 @@ If you don't know how to send in a pr, just ask return or any of the other autis
     - [ ] GlobalBasicSettings (@GoingCrazyDude)
     - [X] Appearance (@Netsoftworks)
     - [ ] Integrations
-    - [ ] Bootstrapper Options
+    - [X] Bootstrapper Options (@Naveandice)
     - [ ] Joingame stuff (lol)
 - [X] For Developers (@GoingCrazyDude)
     - [X] Downloading from source and building
