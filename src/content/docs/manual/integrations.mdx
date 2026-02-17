@@ -64,3 +64,16 @@ Shows the Roblox account you're playing with on your Discord profile.
     Multi instancing might not work as expected. This is due to Roblox not really liking this feature. There is a chance we might remove this feature in the future.
 </Aside>
 Allows for having more than one Roblox game client simultaneously. You cannot launch multiple instances of Roblox for the same account, however.
+
+## Custom Integrations
+
+Fishstrap will automatically launch any other external programs alongside Roblox.
+
+| Settings                      | Description |
+|-------------------------------|-----------------------|
+| Name                          | A label to use for your integration. |
+| Application Location          | The file path of the program to launch. Must point to an executable file (`.exe`). |
+| Launch Delay                  | Time in seconds to wait before launching the program. Useful if the program should start after Roblox fully loads. |
+| Launch Arguments              | Command-line parameters, useful if your program supports it. |
+| Auto close when Roblox closes | Fishstrap will automatically close the program when Roblox closes. |
+| Pre Roblox Launch             | Launch the program before Roblox opens. |
