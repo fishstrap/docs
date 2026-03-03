@@ -19,6 +19,9 @@ If you don't know how to send in a pr, just ask return or any of the other autis
     - [X] Appearance (@Netsoftworks)
     - [ ] Integrations
     - [X] Bootstrapper Options (@Naveandice)
+    - [X] Appearance (@NetSoftworks)
+    - [X] Integrations (@NetSoftworks)
+    - [ ] Bootstrapper Options
     - [ ] Joingame stuff (lol)
 - [X] For Developers (@GoingCrazyDude)
     - [X] Downloading from source and building
