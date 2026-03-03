@@ -16,6 +16,9 @@ If you don't know how to send in a pr, just ask return or any of the other autis
     - [ ] FastFlags (Studio)
     - [X] FastFlags (Client) (@Skylan031)
     - [ ] GlobalBasicSettings (@GoingCrazyDude)
+    - [X] Appearance (@Netsoftworks)
+    - [ ] Integrations
+    - [X] Bootstrapper Options (@Naveandice)
     - [X] Appearance (@NetSoftworks)
     - [X] Integrations (@NetSoftworks)
     - [ ] Bootstrapper Options

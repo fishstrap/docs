@@ -6,29 +6,52 @@ description: Configure what Fishstrap should do when launching Roblox.
 import { Aside } from '@astrojs/starlight/components';
 
 ## Prompt to confirm closure when launching another Roblox instance
-Prevents closure of your current existing game from accidentally launching another one.
 
-## Allow use of unsupported Roblox languages
-Only applies to games launched from the Roblox website.
+Fishstrap will prompt you when launching another instance of Roblox to confirm
+whether you want to close the existing instance or cancel the launch of another
+one.
+
+<img
+  src="/docs_bootstrapper_confirmclosureprompt.png"
+  alt="Fishstrap prompting the user to confirm closure of existing instance"
+/>
 
 ## Background updates
 
-<Aside type="note">Not recommnded for slow networks. At least 3GB of free storage space is required for this feature to work.</Aside>
+<Aside type="note">
+  This feature is not recommended for slow internet connections (such as Wi-Fi
+  or mobile data) and requires at least 3 GB of free storage space to work.
+</Aside>
 
-Update your Roblox in the background instead of waiting.
+Allows Fishstrap to download new versions of Roblox in the background while you
+are playing. It will switch to a new Roblox version on the next launch.
 
 ## Cleaner
 
 Fishstrap will automatically remove old data to save on space on your PC.
 
-#### When should the files get deleted
-Files older than set amount will be deleted.
+### When should the files get deleted
 
-#### Cache
-Old downloads will be deleted.
+This option selects the cleaner's threshold for old files. Files older than the
+selected threshold will be deleted on the next launch.
 
-#### Logs
-Remove Roblox log files.
+- **Never** disables the cleaner.
+- **After 1 day**, **After 1 week**, **After 1 month** and **After 2 months**
+  will enable the cleaner and set its threshold to 1 day, 1 week, 1 month and 2
+  months respectively.
 
-#### Fishstrap Logs
-Remove Fishstrap logs.
+### Which files the cleaner can delete?
+
+The cleaner only deletes these files you have enabled the toggle for:
+
+- **Cache**: looks for old downloads.
+- **Logs**: looks for old Roblox logs.
+- **Fishstrap Logs**: looks for old Fishstrap logs.
+
+Toggles and their respective paths are shown in the table below.
+
+| Toggle         | Paths                                                              |
+|----------------|--------------------------------------------------------------------|
+| Cache          | `%LOCALAPPDATA%\Fishstrap\Downloads`, `%LOCALAPPDATA%\Temp\Roblox` |
+| Logs           | `%LOCALAPPDATA%\Roblox\logs`                                       |
+| Fishstrap Logs | `%LOCALAPPDATA%\Fishstrap\Logs`                                    |
