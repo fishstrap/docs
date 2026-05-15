@@ -1,8 +1,8 @@
 /** font **/
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 @layer base, starlight, theme, components, utilities;
@@ -11,17 +11,17 @@ body {
     --sl-color-accent-low: #0c2c45;
     --sl-color-accent: #1a99dd;
     --sl-color-accent-high: #bee3f9;
-    
+
     --sl-color-bg: #1b1b1b;
     --sl-color-bg-nav: #111111;
     --sl-color-bg-sidebar: #141414;
-    
+
     --sl-color-text: #eeeeee;
     --sl-color-text-accent: #1a99dd;
     --sl-color-black: #161616;
 }
 
-:root[data-theme='light'] {
+:root[data-theme="light"] {
     --sl-color-accent-low: #e0f7ff;
     --sl-color-accent: #1a99dd;
     --sl-color-accent-high: #0c2c45;
@@ -41,8 +41,4 @@ body {
 
 .inline-icon {
     display: inline;
-}
-
-.hero img {
-    width: 550px;
 }

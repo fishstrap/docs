@@ -9,7 +9,7 @@ export default defineConfig({
             title: 'Fishstrap',
             favicon: '/favicon.png',
             logo: {
-                src: './src/assets/favicon.webp',
+                src: './src/assets/favicon.png',
                 replacesTitle: true,
             },
             defaultLocale: 'root',
@@ -38,7 +38,8 @@ export default defineConfig({
 					label: 'Manual',
                     items: [
                         { label: 'Introduction to Fishstrap', slug: 'manual/introduction'},
-                        { label: 'FastFlags (Client)', slug: 'manual/fast-flags-client'},
+                        { label: 'FastFlags (Client)', slug: 'manual/fast-flags-client' },
+                        { label: 'FastFlags (Studio)', slug: 'manual/fast-flags-studio'},
                         { label: 'Appearance', slug: 'manual/appearance'},
                         { label: 'Integrations', slug: 'manual/integrations'},
                         { label: 'Bootstrapper', slug: 'manual/bootstrapper'},
