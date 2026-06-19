@@ -54,6 +54,12 @@ export default defineConfig({
 					],
                 },
                 {
+					label: 'Patch Notes',
+					items: [
+                        { label: 'Version 3.1.0', slug: 'patch-notes/v3-1-0' },
+					],
+                },
+                {
 					label: 'Legal',
 					items: [
                         { label: 'License', slug: 'legal/license' },
