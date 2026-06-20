@@ -4,6 +4,9 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+    redirects: {
+        '/patch-notes/v3-1-1': '/patch-notes/v3-1-0'
+    },
 	integrations: [
         starlight({
             title: 'Fishstrap',
