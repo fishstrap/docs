@@ -1,14 +1,39 @@
 ---
-title: Welcome to the Fishstrap Docs!
-description: The official wiki for the Fishstrap bootstrapper.
+title: Fishstrap Wiki
+description: Visit the official Wiki for Fishstrap — an alternative Roblox bootstrapper based on Bloxstrap.
 template: splash
 hero:
-    tagline: Documentation regarding anything related to Fishstrap.
-    image:
-        dark: https://www.fishstrap.app/img/Showcase-Dark.png
-        light: https://www.fishstrap.app/img/Showcase-Light.png
-    actions:
-        - text: Wiki
-          link: /troubleshoot/preface/
-          icon: right-arrow
+  title: Welcome to the Fishstrap Wiki!
+  tagline: Find documentation for anything related to Fishstrap here.
+  image:
+    alt: A showcase of Fishstrap
+    dark: https://www.fishstrap.app/img/Showcase-Dark.png
+    light: https://www.fishstrap.app/img/Showcase-Light.png
+  actions:
+    - text: Get started
+      link: /manual/introduction/
+      icon: right-arrow
+    - text: View on Github
+      link: https://github.com/fishstrap/fishstrap
+      icon: github
+      variant: minimal
+    - text: View on Fishjo
+      link: https://git.fishstrap.app/fishstrap/fishstrap
+      icon: forgejo
+      variant: minimal
 ---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+<CardGrid>
+  <LinkCard
+    title="Frequently Asked Questions"
+    description="Find answers to most common questions about Fishstrap"
+    href="/faq/"
+  />
+  <LinkCard
+    title="Troubleshooting"
+    description="Got a problem with Fishstrap? Read this first!"
+    href="/troubleshoot/preface/"
+  />
+</CardGrid>
