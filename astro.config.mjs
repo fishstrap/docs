@@ -5,7 +5,9 @@ import starlight from "@astrojs/starlight";
 // https://astro.build/config
 export default defineConfig({
     redirects: {
-        "/patch-notes/v3-1-1": "/patch-notes/v3-1-0",
+        "/patch-notes/v3-1-0": "/release-notes/v3-1-0",
+        "/patch-notes/v3-1-1": "/release-notes/v3-1-0",
+        "/patch-notes/v3-1-2": "/release-notes/v3-1-2",
     },
     integrations: [
         starlight({
@@ -28,48 +30,45 @@ export default defineConfig({
             social: [{ icon: "github", label: "GitHub", href: "https://github.com/fishstrap/fishstrap" }],
             customCss: ["./src/css/custom.css"],
             sidebar: [
-                {
-                    label: "FAQ",
-                    items: [{ label: "Frequently Asked Questions (FAQ)", slug: "faq/faq" }],
-                },
+                { slug: "faq" },
                 {
                     label: "Manual",
                     items: [
-                        { label: "Introduction to Fishstrap", slug: "manual/introduction" },
-                        { label: "FastFlags (Client)", slug: "manual/fast-flags-client" },
-                        { label: "FastFlags (Studio)", slug: "manual/fast-flags-studio" },
-                        { label: "Appearance", slug: "manual/appearance" },
-                        { label: "Integrations", slug: "manual/integrations" },
-                        { label: "Bootstrapper", slug: "manual/bootstrapper" },
+                        { slug: "manual/introduction" },
+                        { slug: "manual/fast-flags-client" },
+                        { slug: "manual/fast-flags-studio" },
+                        { slug: "manual/appearance" },
+                        { slug: "manual/integrations" },
+                        { slug: "manual/bootstrapper" },
                     ],
                 },
                 {
                     label: "Troubleshooting",
                     items: [
-                        { label: "Preface", slug: "troubleshoot/preface" },
-                        { label: "Troubleshooting Fishstrap", slug: "troubleshoot/fishstrap" },
-                        { label: "Troubleshooting Roblox", slug: "troubleshoot/roblox" },
+                        { slug: "troubleshoot/preface" },
+                        { slug: "troubleshoot/fishstrap" },
+                        { slug: "troubleshoot/roblox" },
                     ],
                 },
                 {
-                    label: "Patch Notes",
+                    label: "Release Notes",
                     items: [
-                        { label: "Version 3.1.0", slug: "patch-notes/v3-1-0" },
-                        { label: "Version 3.1.2", slug: "patch-notes/v3-1-2" },
+                        { slug: "release-notes/v3-1-2", badge: { text: "LATEST", variant: "success" } },
+                        { slug: "release-notes/v3-1-0" },
                     ],
                 },
                 {
                     label: "Legal",
                     items: [
-                        { label: "License", slug: "legal/license" },
-                        // { label: 'Privacy Policy', slug: 'legal/privacy-policy' },
+                        { slug: "legal/license" },
+                        // { slug: "legal/privacy-policy" },
                     ],
                 },
                 {
                     label: "For Developers",
                     items: [
-                        { label: "Contributor Guidelines", slug: "developers/contributor-guidelines" },
-                        { label: "Downloading and Building from source", slug: "developers/downloading-and-building" },
+                        { slug: "developers/contributor-guidelines" },
+                        { slug: "developers/downloading-and-building" },
                     ],
                 },
             ],
