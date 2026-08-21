@@ -27,7 +27,10 @@ export default defineConfig({
                     },
                 },
             ],
-            social: [{ icon: "github", label: "GitHub", href: "https://github.com/fishstrap/fishstrap" }],
+            social: [
+                { icon: "github", label: "GitHub", href: "https://github.com/fishstrap/fishstrap" },
+                { icon: "forgejo", label: "Fishjo", href: "https://git.fishstrap.app/fishstrap/fishstrap" },
+            ],
             customCss: ["./src/css/custom.css"],
             sidebar: [
                 { slug: "faq" },
