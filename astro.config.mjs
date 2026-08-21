@@ -34,7 +34,7 @@ export default defineConfig({
 					label: 'FAQ',
                     items: [
                         { label: 'Frequently Asked Questions (FAQ)', slug: 'faq/faq'},
-                        
+
 					]
 				},
                 {
@@ -60,6 +60,7 @@ export default defineConfig({
 					label: 'Patch Notes',
 					items: [
                         { label: 'Version 3.1.0', slug: 'patch-notes/v3-1-0' },
+                        { label: 'Version 3.1.2', slug: 'patch-notes/v3-1-2' },
 					],
                 },
                 {
@@ -73,7 +74,7 @@ export default defineConfig({
 					label: 'For Developers',
                     items: [
                         { label: 'Contributor Guidelines', slug: 'developers/contributor-guidelines' },
-                        { label: 'Downloading and Building from source', slug: 'developers/downloading-and-building' },   
+                        { label: 'Downloading and Building from source', slug: 'developers/downloading-and-building' },
 					],
 				},
 			],
