@@ -29,8 +29,8 @@ export default defineConfig({
                 },
             ],
             social: [
-                { icon: "github", label: "GitHub", href: "https://github.com/fishstrap/fishstrap" },
-                { icon: "forgejo", label: "Fishjo", href: "https://git.fishstrap.app/fishstrap/fishstrap" },
+                { icon: "github", label: "GitHub", href: "https://github.com/fishstrap" },
+                { icon: "forgejo", label: "Fishjo", href: "https://git.fishstrap.app/fishstrap" },
             ],
             customCss: ["./src/css/custom.css"],
             sidebar: [
