@@ -14,7 +14,8 @@ export default defineConfig({
             title: "Fishstrap",
             favicon: "/favicon.png",
             logo: {
-                src: "./src/assets/favicon.png",
+                dark: "./src/assets/Fishstrap-Dark.png",
+                light: "./src/assets/Fishstrap-Light.png",
                 replacesTitle: true,
             },
             defaultLocale: "root",
