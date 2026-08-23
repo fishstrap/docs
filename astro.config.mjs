@@ -37,43 +37,23 @@ export default defineConfig({
                 { slug: "faq" },
                 {
                     label: "Manual",
-                    items: [
-                        { slug: "manual/introduction" },
-                        { slug: "manual/fast-flags-client" },
-                        { slug: "manual/fast-flags-studio" },
-                        { slug: "manual/appearance" },
-                        { slug: "manual/integrations" },
-                        { slug: "manual/bootstrapper" },
-                    ],
+                    items: [{ autogenerate: { directory: "manual" } }],
                 },
                 {
                     label: "Troubleshooting",
-                    items: [
-                        { slug: "troubleshoot/preface" },
-                        { slug: "troubleshoot/fishstrap" },
-                        { slug: "troubleshoot/roblox" },
-                    ],
+                    items: [{ autogenerate: { directory: "troubleshoot" } }],
                 },
                 {
                     label: "Release Notes",
-                    items: [
-                        { slug: "release-notes/v3-1-2", badge: { text: "LATEST", variant: "success" } },
-                        { slug: "release-notes/v3-1-0" },
-                    ],
+                    items: [{ autogenerate: { directory: "release-notes" } }],
                 },
                 {
                     label: "Legal",
-                    items: [
-                        { slug: "legal/license" },
-                        // { slug: "legal/privacy-policy" },
-                    ],
+                    items: [{ autogenerate: { directory: "legal" } }],
                 },
                 {
                     label: "For Developers",
-                    items: [
-                        { slug: "developers/contributor-guidelines" },
-                        { slug: "developers/downloading-and-building" },
-                    ],
+                    items: [{ autogenerate: { directory: "developers" } }],
                 },
             ],
         }),
