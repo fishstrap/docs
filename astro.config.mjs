@@ -33,6 +33,8 @@ export default defineConfig({
                 { icon: "forgejo", label: "Fishjo", href: "https://git.fishstrap.app/fishstrap" },
             ],
             customCss: ["./src/css/custom.css"],
+            editLink: { baseUrl: "https://github.com/fishstrap/docs/edit/main/" },
+            lastUpdated: true,
             sidebar: [
                 { slug: "faq" },
                 {
