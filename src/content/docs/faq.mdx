@@ -1,34 +1,88 @@
 ---
 title: Frequently Asked Questions
-description: Answers to common questions about Fishstrap.
+description: Find answers to most common questions about Fishstrap here.
+tableOfContents: false
+
+# Find icons for cards here:
+# https://starlight.astro.build/reference/icons/#all-icons
 ---
 
-import { Card } from '@astrojs/starlight/components';
-import { Aside } from '@astrojs/starlight/components';
+import { Card } from "@astrojs/starlight/components";
 
-<Card title="Is fishstrap.com official?" icon="magnifier">
-    No, fishstrap.com is not the official website. The only real website is [fishstrap.app](https://fishstrap.app). The only place to get Fishstrap from is either the Github or the official website.
+<Card title="Is fishstrap.com an official website?" icon="warning">
+  **No, fishstrap.com is not the official website.** Fishstrap's only official
+  website is [fishstrap.app][main], whose top-level domain is `.app`. This Wiki
+  is available at [wiki.fishstrap.app][wiki], a subdomain of fishstrap.app.
 </Card>
-<Card title="Is Fishstrap Malware?" icon="magnifier">
-    No, Fishstrap is **NOT** malware. The code for the app can be publicly viewed on [Github](https://github.com/Fishstrap/Fishstrap). Antivirus software may flag it as malware, but rest assured that it is not.
-</Card>
-<Card title="Can using Fishstrap get me banned?" icon="magnifier">
-    No, it's impossible for Fishstrap to get you banned. We do not interact with the roblox process in any possible way that could lead to a ban.
 
-    Additionally, Roblox themselves has made a statement about this issue:
-    <img src="/statement.webp" />
+<Card title="Where can I download Fishstrap?" icon="download">
+  Official sources to download Fishstrap from are the [GitHub
+  repository][gh-repo] and the official website. We also have a self-hosted
+  Forgejo instance with [a repository mirror][fishjo-repo] (it is source code
+  only). Any other websites offering downloads and/or claiming to be us are not
+  controlled by us, do not download from them.
 </Card>
-<Card title="Does Fishstrap increase my FPS?" icon="magnifier">
-    No, Fishstrap does not increase your FPS, nor is it an FPS booster. Any tool claiming to "boost your FPS" is likely lying to you.
-</Card>
-<Card title="What happened to my FastFlags?" icon="magnifier">
-    <Aside type="danger">Do not download any program that claims to let you use custom Flags. It will most likely get you banned/hacked.</Aside>
 
-    Due to a Roblox update, FastFlags can no longer be modified on the Roblox player client (The one you use to play games). The only FastFlags you can use are the ones Roblox permits you to use. You can view the list of Flags on [this devforum page](https://devforum.roblox.com/t/allowlist-for-local-client-configuration-via-fast-flags/3966569).
+<Card title="Is Fishstrap malware?" icon="information">
+  **Fishstrap is not malware, never was, and never will be.** It is free and
+  open-source software with its source code available for everyone to read at
+  our [GitHub][gh-repo] and [Forgejo][fishjo-repo] repositories. Antiviruses may
+  falsely flag new versions of Fishstrap as malware (which is common for FOSS),
+  but rest assured they aren't.
 </Card>
+
+<Card title="Could Fishstrap get me banned?" icon="information">
+  No, and it is not possible for Fishstrap to get you banned. It does not modify
+  the client binary in any way that could get your Roblox account banned or
+  terminated.
+
+  :::note
+  Replacing default textures and/or sounds with your own does not qualify as
+  having [a modified client the way Roblox defines it][devforum-1], as those
+  assets are stored as separate files and are not embedded into the client.
+  :::
+
+  ![A Roblox statement post on Devforum](../../assets/img/faq/statement.png)
+</Card>
+
+<Card title="Would Fishstrap increase my FPS/reduce my ping?" icon="close">
+  Fishstrap wouldn't increase your FPS nor would it reduce your latency to
+  Roblox servers. Consider upgrading your PC for more performance and/or
+  upgrading your network plan or moving closer to Roblox servers for less
+  latency.
+</Card>
+
+<Card title="My FastFlags don't work anymore!" icon="warning">
+  Roblox has implemented an allowlist of FastFlags for the client (the one you
+  use to play games). This means you can't use FastFlags that were not approved
+  by Roblox. See the allowlist in [this Devforum post][devforum-2].
+
+  :::danger
+  Avoid programs that claim to let you use custom FastFlags! They will likely
+  get you hacked or banned.
+  :::
+</Card>
+
 <Card title="Where can I find mods?" icon="magnifier">
-    You can find custom user made mods on either the [Fishstrap](https://discord.gg/dZJSbgHx8y) or [Bloxstrap](https://discord.gg/nKjV3mGq6R) discord server. [Gamebanana](https://gamebanana.com/games/2879) is also a good place to find mods.
+  You can find user-submitted mods on [Fishstrap] or [Bloxstrap] Discord
+  servers. [GameBanana] also has something to offer.
 </Card>
-<Card title="I have an undocumented issue. Where can I find assistance?" icon="magnifier">
-    You can join our discord server [here](https://discord.gg/dZJSbgHx8y) for further support.
+
+<Card title="My issue is undocumented. Where can I report it?" icon="document">
+  [Join our Discord server][Fishstrap] or [create an issue on GitHub][gh-repo]
+  for further support.
 </Card>
+
+[main]: https://www.fishstrap.app
+[wiki]: https://wiki.fishstrap.app
+
+[gh-repo]: https://github.com/fishstrap/fishstrap
+[fishjo-repo]: https://git.fishstrap.app/fishstrap/fishstrap
+
+[Fishstrap]: https://discord.gg/dZJSbgHx8y
+[Bloxstrap]: https://discord.gg/nKjV3mGq6R
+
+[devforum-1]: https://devforum.roblox.com/t/an-update-on-automated-action-against-modified-clients/3640609
+[devforum-2]: https://devforum.roblox.com/t/allowlist-for-local-client-configuration-via-fast-flags/3966569
+
+[GameBanana]: https://gamebanana.com/games/2879
