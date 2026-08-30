@@ -1,100 +1,121 @@
 ---
 title: Fishstrap Issues
 description: Troubleshooting common Fishstrap issues including missing .NET runtimes, network errors, FastFlag problems, and configuration mistakes.
+tableOfContents:
+  maxHeadingLevel: 2
 ---
 
-import { Card, Aside, Code, Steps } from '@astrojs/starlight/components';
+import { Steps } from "@astrojs/starlight/components";
 
-## ```"[System.IO.FileNotFoundException](System.IO.FileNotFoundException: Could not load file or assembly..."```
+## System.IO.FileNotFoundException: Could not load file or assembly...
 
-#### Causes
+### Causes
 
-- Missing .NET Desktop Runtime 6.0  
-- Corrupted or incomplete .NET installation
-    
-#### Solution
-    
-<Steps>
-    1. **Check installed runtimes**:  
-       Open Command Prompt and run:
-       <Code title="pwsh" code="dotnet --list-runtimes" lang="bash" />
-       Look for `Microsoft.WindowsDesktop.App 6.0.x`. If missing, the runtime isn’t installed correctly.
-    
-    2. **Install .NET Desktop Runtime 6.0**:  
-       Download and install **.NET Desktop Runtime 6.0** (not just ".NET Runtime") from:  
-       [https://dotnet.microsoft.com/en-us/download/dotnet/6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-</Steps>
+- You are missing .NET Desktop Runtime 6.0.36
+- Your .NET installation is corrupted or incomplete
 
----
-
-## ```"System.Net.Http.HttpRequestException:..."```
-
-#### Causes:
-- Roblox is down.
-- Using a VPN, Cloudflare WARP, or proxy.
-- Government censorship or network restrictions.
-- Incorrect Deployment settings in Fishstrap
-
-#### Solution
-<Steps>
-    1. **Check if Roblox is working** by visiting the [Roblox Status](https://status.roblox.com/) page.
-    2. **Disable/Enable VPNs, or proxies**: Check if the issue persists after you disable/enable your VPN.
-    3. **Check Deployment settings**:
-       In Fishstrap, go to the **Deployment** tab → Set **Channel** to `Production` and **Automatic channel change action** to **“Never change”**.
-</Steps>
-
----
-
-## My Exploit/Hack doesn't work!
-We at Fishstrap take this very seriously. Please follow this link for further [help](/brainless.png).
-
----
-
-## FFlags are not working
-
-#### Causes:
-
-- Using flags not on Roblox’s official allowlist  
-- Expecting Studio behavior in the client
-
-#### Solution:
-1. **Only use allowlisted FastFlags in the client**:  
-   As of late 2025, Roblox enforces a strict allowlist for client-side FastFlags.  
-   See the [full list here](https://devforum.roblox.com/t/allowlist-for-local-client-configuration-via-fast-flags/3966569).
-
-2. **Studio has no allowlist**:  
-   All FastFlags still work in **Roblox Studio**, but **not in the client** unless explicitly allowed.
-
----
-
-## Global settings tab is greyed out
-
-#### Causes:
-
-- Fishstrap hasn’t launched Roblox yet  
-- Configuration not initialized
-
-#### Solution:
-1. **Launch any game through Fishstrap at least once** - this initializes internal settings.  
-2. **Close Roblox and reopen the Fishstrap settings** - global settings should now be editable.
-
----
-
-## Stuck on “Waiting for data…”
+### Solution
 
 <Steps>
-    1. **Click Cancel** on the loading screen.  
-    2. **Rejoin the same game** - this usually resolves temporary asset loading issues.
+1. Check installed runtimes through Command Prompt or PowerShell:
+
+   ```bash title="PowerShell"
+   dotnet --list-runtimes
+   ```
+
+   Look for a line that says `Microsoft.WindowsDesktop.App 6.0.36`. If it's
+   missing or Command Prompt/PowerShell says `dotnet` is not a command, the
+   runtime isn't installed correctly.
+
+2. Install **.NET Desktop Runtime 6.0.36** (not just .NET Runtime) from
+   https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 </Steps>
 
----
+## System.Net.Http.HttpRequestException: ...
 
-## “The JSON you've entered does not appear to be valid.”
+### Causes
 
-#### Causes:
+- Roblox is down at the moment
+- You are using a VPN, Cloudflare WARP, or a proxy
+- You have incorrect deployment settings in Fishstrap
+- You are affected by government censorship or network restrictions
 
-- Incorrect JSON syntax  
-- Misformatted FastFlag entries
+### Solution
 
-#### Solution:
-Use a JSON verification tool like [JSONLint](https://jsonlint.com/) to validate your JSON.
+<Steps>
+1. Visit the [Roblox Status] page to see if Roblox is working.
+
+2. Try disabling/enabling your VPN or proxy and check if the issue persists.
+
+3. Visit the **Deployment** tab in Fishstrap, set your channel to `production`
+   and set **Automatic channel change action** to **Never change**.
+</Steps>
+
+## My exploits / hacks don't work!
+
+We at Fishstrap take this very seriously. Please follow this link for further
+[help](/brainless.png).
+
+## FastFlags are not working
+
+### Causes
+
+- You are using FastFlags not on Roblox's official allowlist
+- You are expecting Studio behavior in the client
+
+### Solution
+
+As of late 2025, Roblox enforces an allowlist for FastFlags on the client (the
+one used to play games). See the allowlist in [this Devforum post][devforum].
+All FastFlags still work in Roblox Studio.
+
+## Global Settings tab is grayed out
+
+### Causes
+
+- You haven't launched Roblox with Fishstrap yet to initialize configuration
+
+### Solution
+
+<Steps>
+1. Launch any game through Fishstrap at least once to initialize configuration.
+
+2. Close Roblox and reopen Fishstrap's settings to edit Global Settings.
+</Steps>
+
+## Stuck on "Waiting for data..."
+
+<Steps>
+1. Cancel the launch by pressing **Cancel** button on the bootstrapper window.
+
+2. Try rejoining the same game and see if the issue persists.
+
+3. If the issue does persist, you could try forcing local data by manually
+   editing the settings file. Open `%LOCALAPPDATA%\Fishstrap\Settings.json` in
+   your preferred text editor and find the property called `ForceLocalData`,
+   then change its value to `true`:
+
+   ```json title="Settings.json" del={3} ins={4}
+   {
+     // ...
+     "ForceLocalData": false,
+     "ForceLocalData": true,
+     // ...
+   }
+   ```
+</Steps>
+
+## "The JSON you've entered does not appear to be valid."
+
+### Causes
+
+- You have an incorrect JSON syntax or misformatted FastFlag entries
+
+### Solution
+
+Use a JSON verification tool like [JSONLint] to validate your JSON.
+
+[Roblox Status]: https://status.roblox.com/
+[JSONLint]: https://jsonlint.com/
+
+[devforum]: https://devforum.roblox.com/t/allowlist-for-local-client-configuration-via-fast-flags/3966569
