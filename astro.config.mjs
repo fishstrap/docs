@@ -50,12 +50,12 @@ export default defineConfig({
                     items: [{ autogenerate: { directory: "release-notes" } }],
                 },
                 {
-                    label: "Legal",
-                    items: [{ autogenerate: { directory: "legal" } }],
-                },
-                {
                     label: "For Developers",
                     items: [{ autogenerate: { directory: "developers" } }],
+                },
+                {
+                    label: "Legal",
+                    items: [{ autogenerate: { directory: "legal" } }],
                 },
             ],
         }),
