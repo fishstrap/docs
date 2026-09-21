@@ -11,11 +11,15 @@ export default defineConfig({
     },
     integrations: [
         starlight({
-            title: "Fishstrap",
+            title: "Fishstrap Wiki",
+            titleDelimiter: "·", // \u00b7
+            description:
+                "Visit the official Wiki for Fishstrap — an alternative Roblox bootstrapper based on Bloxstrap.",
             favicon: "/favicon.png",
             logo: {
-                dark: "./src/assets/Fishstrap-Dark.png",
-                light: "./src/assets/Fishstrap-Light.png",
+                alt: "Fishstrap logo",
+                dark: "./src/assets/fishstrap-logo-dark.png",
+                light: "./src/assets/fishstrap-logo-light.png",
                 replacesTitle: true,
             },
             defaultLocale: "root",
@@ -24,13 +28,14 @@ export default defineConfig({
                     tag: "meta",
                     attrs: {
                         property: "og:image",
-                        content: "/Thumbnail.png",
+                        content: "/thumbnail.png",
                     },
                 },
             ],
             social: [
                 { icon: "github", label: "GitHub", href: "https://github.com/fishstrap" },
                 { icon: "forgejo", label: "Fishjo", href: "https://git.fishstrap.app/fishstrap" },
+                { icon: "discord", label: "Discord", href: "https://discord.gg/dZJSbgHx8y" },
             ],
             customCss: ["./src/css/custom.css"],
             editLink: { baseUrl: "https://github.com/fishstrap/docs/edit/main/" },
