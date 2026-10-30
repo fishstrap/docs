@@ -8,6 +8,7 @@ export default defineConfig({
         "/patch-notes/v3-1-0": "/release-notes/v3-1-0",
         "/patch-notes/v3-1-1": "/release-notes/v3-1-0",
         "/patch-notes/v3-1-2": "/release-notes/v3-1-2",
+        "/patch-notes/v3-2-0": "/release-notes/v3-2-0",
     },
     integrations: [
         starlight({
